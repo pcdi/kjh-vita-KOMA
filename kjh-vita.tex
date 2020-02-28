@@ -144,6 +144,8 @@ beforeskip=1em plus 1pt,
 }
 
 %% Set command for bylines of additional information on entries
+%% Bylines can appear as a new line or inline, depending on how much space they need.
+%% If they are a new line, they need to be preceded by "\\" and no blank line (par break).
 \newcommand*{\byline}[1]{\unskip\hspace{\myseparator}{\footnotesize #1}}
 
 %%%------------------------------------------------------------------------
@@ -208,9 +210,8 @@ Assistant Professor of Sociology, University of Arizona, 2001--2008.
 
 %\noindent\emph{Princeton University}
 
-Ph.D, Sociology, Princeton University, 2001.
-
-\hspace{0.35in} \footnotesize Dissertation: \emph{Exchange in Blood and Organs}.\\ Winner, American Sociological Association's Dissertation Award.\normalsize 
+Ph.D, Sociology, Princeton University, 2001.\\
+\byline{Dissertation: \emph{Exchange in Blood and Organs}.\\ Winner, American Sociological Association's Dissertation Award.} 
 
 M.A., Sociology, Princeton University, 1998. 
 
@@ -219,7 +220,7 @@ M.A., Sociology, Princeton University, 1998.
 
 M.A., Sociology, First Class, National University of Ireland (Cork), 1994.
 
-\hspace{0.35in} \footnotesize Thesis: \emph{The Language of Influence: Public Debate and the Politics of the X-case.} \normalsize 
+\byline{Thesis: \emph{The Language of Influence: Public Debate and the Politics of the X-case.}} 
 
 B.A. (Joint Hons.), First Class, National University of Ireland (Cork), 1993.
 
@@ -230,13 +231,9 @@ B.A. (Joint Hons.), First Class, National University of Ireland (Cork), 1993.
 
 \noindent\emph{Book}
 
-Kieran Healy. 2006. \emph{\href{http://www.lastbestgifts.com}{Last Best Gifts: Altruism and the Market for Human Blood and Organs}}. Chicago:~University of Chicago Press. 
+Kieran Healy. 2006. \emph{\href{http://www.lastbestgifts.com}{Last Best Gifts: Altruism and the Market for Human Blood and Organs}}. Chicago:~University of Chicago Press.\\
+\byline{Winner, Association for Research on Nonprofit Organizations and Voluntary Action (ARNOVA) Outstanding Book Prize. Finalist, C. Wright Mills Award.} 
 
-\hspace{0.35in} \footnotesize Winner, Association for Research on Nonprofit Organizations and Voluntary Action (ARNOVA) Outstanding Book Prize. Finalist, C. Wright Mills Award. 
-
-
-
-\normalsize
 
 
 \noindent\emph{Journal articles}
