@@ -40,9 +40,10 @@
 %%% remove these as needed.
 %%%------------------------------------------------------------------------
 
-\documentclass[11pt,article,oneside]{memoir}   
-\usepackage{org-preamble-xelatex} 
-\usepackage{fontawesome,url}
+\documentclass[12pt,oneside,a4paper,DIV=classic]{scrartcl}   
+\usepackage{fontawesome,marginnote}
+\usepackage[svgnames]{xcolor}
+\usepackage[xetex, colorlinks=true, urlcolor=DarkSlateBlue, citecolor=DarkSlateBlue, filecolor=DarkSlateBlue, plainpages=false, pdfpagelabels, bookmarksnumbered]{hyperref}
 
 
 %%%------------------------------------------------------------------------
@@ -94,17 +95,17 @@
 %% Consolas or inconsolata are good alternatives.
 \setromanfont[Mapping={tex-text}, 
 	Numbers={OldStyle},
-	Ligatures={Common}]{Minion Pro}
+	Ligatures={Common}]{EB Garamond}
 \setsansfont[Mapping=tex-text,
 	Ligatures={Common}, 
-	Colour=AA0000]{Unit-Medium}
-\setmonofont[Mapping=tex-text,Scale=0.72]{PragmataPro} 
+	Colour=AA0000]{Source Sans Pro}
+\setmonofont[Mapping=tex-text,Scale=MatchLowercase]{Inconsolata} 
 
-\newfontface\scheader[SmallCapsFont={Minion Pro},SmallCapsFeatures={Letters=SmallCaps}]{Minion Pro}
+\newfontface\scheader[SmallCapsFont={EB Garamond},SmallCapsFeatures={Letters={SmallCaps,UppercaseSmallCaps}}]{EB Garamond}
 
 \newfontface\addressblock[Mapping={tex-text}, 
 	Numbers={OldStyle},
-	Ligatures={Common}]{Minion Pro Medium Caption}
+	Ligatures={Common}]{EB Garamond}
 
 
 %%%------------------------------------------------------------------------
@@ -138,8 +139,8 @@
 % These lines will insert git revision info in the footer, using the vc
 % package---see docs for vc package for details. Comment out this line
 % if you're not using vc, and also remove the \input{vc} line above.
-\pagestyle{kjh}
-\thispagestyle{kjhgit}
+% \pagestyle{kjh}
+% \thispagestyle{kjhgit}
 
 
 %%%------------------------------------------------------------------------
@@ -478,3 +479,8 @@ College, Cork, 1991--1993.
 \medskip
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
