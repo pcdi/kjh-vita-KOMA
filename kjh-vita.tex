@@ -87,7 +87,6 @@
 %%%------------------------------------------------------------------------
 %%% Document
 %%%------------------------------------------------------------------------
-\begin{document}
 
 %% Choose fonts for use with xelatex
 %% Minion and Myriad are widely available, from Adobe. 
@@ -113,7 +112,7 @@
 %%% Local commands
 %%%------------------------------------------------------------------------
 
-%% Set length of separator for additional information on entries
+%% Set length of separator for additional information on entries, such as thesis title and supervisor
 \newlength{\myseparator}
 \setlength{\myseparator}{1em}
 \newcommand*{\separator}{\unskip\hspace{\myseparator}}
@@ -124,25 +123,16 @@
 
 \setlength{\leftskip}{\myindent}%
 \setlength{\parindent}{-\leftskip}
-\AddtoDoHook{heading/begingroup/section}{\hspace*{\parindent}{}}
-
-%% Set header to be sans-serif, footnote size
-%% https://tex.stackexchange.com/a/344445/8432
-\RedeclareSectionCommand[
-font=\normalfont\sffamily\footnotesize,
-afterskip=0pt,
-beforeskip=1em plus 1pt,
-]{section}
 
 %% Set width of margin
 \setlength{\marginparwidth}{0.75\marginparwidth}
 
-%% Set header to be in the margin and flush left (ragged right)
-\renewcommand{\sectioncatchphraseformat}[4]{%
-    \Ifstr{#1}{section}
-        {\marginnote{\raggedright#4}}
-        {\hskip #2#3#4}%
-}
+%% Set section to margin note, sans serif, footnote size, flush left 
+\renewcommand*{\section}[1]{\bigskip\marginnote{\sffamily\footnotesize\raggedright{#1}}\par}
+
+%% Set subsection to inline, italic
+\renewcommand*{\subsection}[1]{\textit{#1}}
+
 
 %% Set command for bylines of additional information on entries
 %% Bylines can appear as a new line or inline, depending on how much space they need.
@@ -164,6 +154,8 @@ beforeskip=1em plus 1pt,
 
 \pagestyle{scrheadings}
 \thispagestyle{plain.scrheadings}
+
+\begin{document}
 
 
 %%%------------------------------------------------------------------------
@@ -225,8 +217,7 @@ M.A., Sociology, Princeton University, 1998.
 %
 %\noindent\emph{National University of Ireland (Cork)}
 
-M.A., Sociology, First Class, National University of Ireland (Cork), 1994.
-
+M.A., Sociology, First Class, National University of Ireland (Cork), 1994.\\
 \byline{Thesis: \emph{The Language of Influence: Public Debate and the Politics of the X-case.}} 
 
 B.A. (Joint Hons.), First Class, National University of Ireland (Cork), 1993.
@@ -236,14 +227,14 @@ B.A. (Joint Hons.), First Class, National University of Ireland (Cork), 1993.
 %% Publications
 \section{publications}
 
-\noindent\emph{Book}
+\subsection{Book}
 
 Kieran Healy. 2006. \emph{\href{http://www.lastbestgifts.com}{Last Best Gifts: Altruism and the Market for Human Blood and Organs}}. Chicago:~University of Chicago Press.\\
 \byline{Winner, Association for Research on Nonprofit Organizations and Voluntary Action (ARNOVA) Outstanding Book Prize. Finalist, C. Wright Mills Award.} 
 
 
 
-\noindent\emph{Journal articles}
+\subsection{Journal articles}
  
 %% Use revnumerate environment if numbered publications are needed. 
 %% (Include it above in the preamble).
@@ -254,7 +245,7 @@ Forthcoming. Kieran Healy and James Moody. ``Data Visualization in Sociology.'' 
 
 Marion Fourcade and Kieran Healy. 2013. ``\href{http://kieranhealy.org/files/papers/classification-situations.pdf}{Classification Situations: Life-chances in the Neoliberal Era}.'' \emph{Accounting, Organizations, and Society} 38:~559--572.
 
-Kieran Healy and Kimberly R. Krawiec. 2012. ``\href{http://kieranhealy.org/files/papers/custom-contract-kidney.pdf}{Custom, Contract, and Kidney Exchange}.'' \emph{Duke Law Journal} 62:~645--670. 
+Kieran Healy and Kimberly R. Krawiec. 2012. ``\href{http://kieranhealy.org/files/papers/custom-contract-kidney.pdf}{Custom, Contract, and Kidney Exchange}.'' \emph{Duke Law Journal} 62:~645--670.
 
 Kieran Healy. 2011. ``Counting and Commodifying.'' \emph{Washington University Journal of Law and Policy}. 35:~337--347.
 
@@ -292,7 +283,7 @@ Kieran Healy. 1998.  ``\href{http://www.kieranhealy.org/files/papers/constraint9
 %\newpage
 
 
-\noindent\emph{Book chapters}
+\subsection{Book chapters}
 % \renewcommand{\labelenumi}{\textsc{c}\theenumi.}
 % \begin{revnumerate}
 
