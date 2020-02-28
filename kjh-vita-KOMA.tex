@@ -6,38 +6,22 @@
 %%% Requirements that are included in a modern tex distribution:
 %%% ------------------------------------------------------------------------
 %%% xelatex
+%%% scrartcl.cls
+%%% scrlayer-scrpage.sty
 %%% fontspec.sty
-%%% hyperrref.sty
-%%% xunicode.sty
-%%% color.sty
-%%% url.sty
-%%% fancyhdr.sty
-%%% memoir.cls
+%%% hyperref.sty
+%%% marginnote.sty
+%%% xcolor.sty
 %%% fontawesome.sty
 %%%
-%%% 
-%%% 
-%%% ------------------------------------------------------------------------
-%%% Requirements from https://github.com/kjhealy/latex-custom-kjh
-%%% ------------------------------------------------------------------------
-%%% org-preamble-xelatex.sty
-%%% memoir-article-styles.sty
 %%%
 %%% ------------------------------------------------------------------------
 %%% Optional
 %%% ------------------------------------------------------------------------
 %%% git
 %%% vc.sty
-%%% revnum.sty
 %%% Fonts
 %%%
-%%% ------------------------------------------------------------------------
-%%% Note
-%%%------------------------------------------------------------------------
-%%% Because this is a hand-tweaked file, be on the look out for \medksip, 
-%%% \bigskip and \newpage commands here and there, which are used to balance
-%%% the layout or avoid widows & orphans, etc. You should of course add or 
-%%% remove these as needed.
 %%%------------------------------------------------------------------------
 
 \documentclass[11pt,oneside,a4paper,DIV=8]{scrartcl}
@@ -81,7 +65,7 @@
 %%%------------------------------------------------------------------------
 
 %% If you don't use git or the vc package (from CTAN), comment this out.
-%% If you comment it out, be sure to remove the \rfoot comment below, too.
+%% If you comment it out, be sure to remove the \ofoot comment below, too.
 \input{vc}
 
 %%%------------------------------------------------------------------------
