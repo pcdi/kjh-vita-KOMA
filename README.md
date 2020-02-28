@@ -1,3 +1,3 @@
-# kjh-vita
+# kjh-vita-KOMA
 
-A simple `.tex` template for making a nicely-formatted academic curriculum vitae. I use this as a template for [my own vita](http://kieranhealy.org/vita.pdf) and put it up here because people regularly emailed me asking for the `.tex` source.
+A simple `.tex` template for making a nicely-formatted academic curriculum vitae. This is a fork of [Kieran Healy](https://kieranhealy.org/)’s [template](http://kieranhealy.org/vita.pdf) and translated from the original `memoir` into into [KOMA-Script](https://www.ctan.org/pkg/koma-script) (`scrartcl`).
