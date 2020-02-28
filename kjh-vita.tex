@@ -40,7 +40,8 @@
 %%% remove these as needed.
 %%%------------------------------------------------------------------------
 
-\documentclass[11pt,oneside,a4paper,DIV=8]{scrartcl}   
+\documentclass[11pt,oneside,a4paper,DIV=8]{scrartcl}
+\usepackage{scrlayer-scrpage}
 \usepackage{fontawesome,marginnote}
 \usepackage[svgnames]{xcolor}
 \usepackage[xetex, colorlinks=true, urlcolor=DarkSlateBlue, citecolor=DarkSlateBlue, filecolor=DarkSlateBlue, plainpages=false, pdfpagelabels, bookmarksnumbered]{hyperref}
@@ -151,12 +152,18 @@ beforeskip=1em plus 1pt,
 %%%------------------------------------------------------------------------
 %%% Page layout
 %%%------------------------------------------------------------------------
+\setkomafont{pageheadfoot}{}
 
-% These lines will insert git revision info in the footer, using the vc
+\ohead[]{\textsc{\thepage}}
+\cfoot[\textsc{\thepage}]{}
+
+% The following line will insert git revision info in the footer, using the vc
 % package---see docs for vc package for details. Comment out this line
 % if you're not using vc, and also remove the \input{vc} line above.
-% \pagestyle{kjh}
-% \thispagestyle{kjhgit}
+\ofoot[\texttt{\footnotesize \VCRevision\ on \VCDateTEX}]{}
+
+\pagestyle{scrheadings}
+\thispagestyle{plain.scrheadings}
 
 
 %%%------------------------------------------------------------------------
