@@ -101,7 +101,7 @@
 	Colour=AA0000]{Source Sans Pro}
 \setmonofont[Mapping=tex-text,Scale=MatchLowercase]{Inconsolata} 
 
-\newfontface\scheader[SmallCapsFont={EB Garamond},SmallCapsFeatures={Letters={SmallCaps,UppercaseSmallCaps}}]{EB Garamond}
+\newfontface\headerfont[SmallCapsFont={EB Garamond},SmallCapsFeatures={Letters={SmallCaps,UppercaseSmallCaps}}]{EB Garamond}
 
 \newfontface\addressblock[Mapping={tex-text}, 
 	Numbers={OldStyle},
@@ -139,6 +139,12 @@
 %% If they are a new line, they need to be preceded by "\\" and no blank line (par break).
 \newcommand*{\byline}[1]{\unskip\hspace{\myseparator}{\footnotesize #1}}
 
+%% Set heading to large size, small caps
+\newcommand*{\scheader}[1]{\bigskip{\LARGE\headerfont\textsc{#1}}}
+
+\newcommand*{\addressentry}[2]{{\footnotesize {#1}} & {\scriptsize #2} \\}
+\newcommand*{\addresslink}[3]{{\scriptsize \texttt{\href{#1}{#2}}} & {\scriptsize #3} \\}
+
 %%%------------------------------------------------------------------------
 %%% Page layout
 %%%------------------------------------------------------------------------
@@ -161,27 +167,26 @@
 %%%------------------------------------------------------------------------
 %%% Address and contact block
 %%%------------------------------------------------------------------------
-\begin{minipage}[t]{2.95in}
+\noindent\begin{minipage}[t]{0.618\linewidth}
  \flushright {\footnotesize 
- \href{http://sociology.duke.edu}{Department of Sociology}, \\ Box 90088, \\ Duke University, \\  Durham, \textsc{nc} 27708.}  
-  
+   \href{http://sociology.duke.edu}{Department of Sociology}, \\
+   Box 90088, \\
+   Duke University, \\
+   Durham, \textsc{nc} 27708.\par}
 \end{minipage}
-\hfill     
-%\begin{minipage}[t]{0.0in}
-% dummy (needed here)
-%\end{minipage}
-\hfill
-\begin{minipage}[t]{1.3in}
-  \flushright \footnotesize  \addressblock \myphone \, \faPhone \\ 
-  {\scriptsize  \texttt{\href{http://twitter.com/kjhealy}{\mytwitter}} \, \faTwitter }  \\ 
-  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}} \, \faEnvelope} \\
-  {\scriptsize  \texttt{\href{\myweb}{\myweb}} \, \faGlobe}
-\end{minipage}
-
+\begin{minipage}[t]{0.382\linewidth}
+\footnotesize\hfill
+  \begin{tabular}[t]{rc}
+    \addressentry{\myphone}{\faPhone}
+    \addresslink{http://twitter.com/kjhealy}{\mytwitter}{\faTwitter}
+    \addresslink{mailto:\myemail}{\myemail}{\faEnvelope}
+    \addresslink{\myweb}{\myweb}{\faGlobe}
+  \end{tabular}
+\end{minipage}\par
 
 
 %% Name 
-\noindent{\LARGE\scheader \textsc{kieran healy}}
+\scheader{Kieran Healy’s CV Template}
 \reversemarginpar
 
        
